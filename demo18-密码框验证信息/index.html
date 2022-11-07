@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./base.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        div {
+            width: 400px;
+            margin: 100px auto;
+        }
+        
+        .message {
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            background: url(./img/img1.png) no-repeat left center;
+            background-size: 20px 20px;
+            padding-left: 20px;
+        }
+        
+        .wrong {
+            display: inline-block;
+            font-size: 12px;
+            color: red;
+            background: url(./img/img2.png) no-repeat left center;
+            background-size: 20px 20px;
+            padding-left: 20px;
+        }
+        
+        .right {
+            display: inline-block;
+            font-size: 12px;
+            color: green;
+            background: url(./img/img1.png) no-repeat left center;
+            background-size: 20px 20px;
+            padding-left: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reegister">
+        <input type="password" class="ipt">
+        <p class="message">请输入6-16位密码</p>
+    </div>
+    <script>
+        var ipt = document.querySelector('.ipt');
+        var message = document.querySelector('.message');
+        ipt.onblur = function() {
+            // Remove根据表单i面的指的长度 ipt.value.length
+
+            if (this.value.length < 6 || this.value.length > 16) {
+                message.className = 'message wrong';
+                message.innerHTML = '您输入的位数不对';
+            } else {
+                message.className = 'message wrong right';
+                message.innerHTML = '格式正确';
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+</html>
