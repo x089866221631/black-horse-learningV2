@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin:0px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.w{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 500px;
+    background-color: red;
+}
+.w div{
+
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}

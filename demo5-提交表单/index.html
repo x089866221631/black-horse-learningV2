@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./base.css">
+    <style>
+        fieldset {
+            width: 300px;
+            height: 150px;
+        }
+    </style>
+    <script type="text/javascript" for="window" event="onload">
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function submitTest() {
+            var msg = "用户名：" + $("input1").value;
+            msg += "\n密码是：" + $("input2").value;
+            alert(msg);
+            return false;
+        }
+        function resetTest() {
+            alert("将数据清空");
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" onsubmit="return submitTest()" onreset="resetTest()">
+        <fieldset>
+            <legend>表单数据提交</legend>
+            <br><label for="">用户名：</label><input type="text" id="input1">
+            <br><label for="">密&nbsp;码：</label><input type="password" id="input2">
+            <br><input type="submit" value="提交">
+            <br><input type="reset" value="重置">
+        </fieldset>
+    </form>
+</body>
+
+</html>
