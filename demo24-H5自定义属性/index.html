@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./base.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <div getTime="20" data-index="2" data-list-name-cc="anny"></div>
+
+    <script>
+        var div = document.querySelector('div');
+        console.log((div.getAttribute('getTime')));
+        div.setAttribute('data-item', 20);
+        console.log(div.getAttribute('data-index'));
+
+        //H5新增自定义属性的方法
+        //dataset是一个集合里面存放了所有一data开头的自定义属性
+        console.log(div.dataset);
+
+        console.log(div.dataset.index);
+        console.log(div.dataset['index']);
+
+        //如果自定义属性有多个-链接的单词，我们获取的时候采用驼峰命名法
+        console.log(div.dataset.listNameCc);
+        console.log(div.dataset['listNameCc']);
+    </script>
+</body>
+
+</html>
+
+</html>
